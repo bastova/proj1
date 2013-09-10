@@ -1,10 +1,17 @@
 Proj1::Application.routes.draw do
+<<<<<<< HEAD
   get "home/index"
+=======
+>>>>>>> 8e168d4e12c494c004555d74a451af8e51bc7545
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
   root 'home#index'
+=======
+  # root 'welcome#index'
+>>>>>>> 8e168d4e12c494c004555d74a451af8e51bc7545
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
