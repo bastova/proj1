@@ -2,4 +2,8 @@
 
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
+-------HW2--------
+added a picture, a link to my github and all the form components + some css styling;
+no issues 
+
 <tt>rake doc:app</tt>.
