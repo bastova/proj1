@@ -2,8 +2,8 @@
 
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
--------HW2--------
-added a picture, a link to my github and all the form components + some css styling;
-no issues 
+-------HW4--------
+created 3 models: users, likes, and categories where users have many likes, like belongs to a user, categories have many likes, like belongs to a category
+
 
 <tt>rake doc:app</tt>.
