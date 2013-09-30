@@ -1,13 +1,18 @@
 Proj1::Application.routes.draw do
 
-  get "home/index"
+  #get "users/new"
+  #get "users/index"
+  resources :users
+  #get "landing_pages/home"
+  #get "home/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
 
-  root 'home#index'
+  #root 'home#index'
+  root :to => 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
