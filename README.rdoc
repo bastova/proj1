@@ -3,7 +3,10 @@
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
 -------HW4--------
-created 3 models: users, likes, and categories where users have many likes, like belongs to a user, categories have many likes, like belongs to a category
+created show, edit views in users. Implemented show, new, edit, destroy, and index methods for users. Links on the index page.
+table Likes now belongs_to users, users has_many likes. Likes has edit, index, show, new views and edit, show, destroy, new methods
+
+Heroku: http://safe-mountain-1693.herokuapp.com/
 
 
 <tt>rake doc:app</tt>.
