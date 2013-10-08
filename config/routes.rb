@@ -3,6 +3,8 @@ Proj1::Application.routes.draw do
   #get "users/new"
   #get "users/index"
   resources :users
+  resources :likes
+  resources :categorys
   #get "landing_pages/home"
   #get "home/index"
 

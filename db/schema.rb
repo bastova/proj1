@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130930010243) do
+ActiveRecord::Schema.define(version: 20131008000042) do
 
   create_table "categories", force: true do |t|
     t.integer  "number"
@@ -21,11 +21,12 @@ ActiveRecord::Schema.define(version: 20130930010243) do
   end
 
   create_table "likes", force: true do |t|
-    t.string   "like"
+    t.string   "title"
     t.string   "user"
     t.boolean  "sport"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id",    default: 0, null: false
   end
 
   create_table "users", force: true do |t|
