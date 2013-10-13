@@ -11,3 +11,20 @@
  *= require_self
  *= require_tree .
  */
+ .field {
+	background: #333;
+	color: #fff;
+	margin-top:-16px;
+ }
+
+ input {
+	color: black;
+ }
+ 
+ p {
+	margin-bottom:0px;
+ }
+ 
+ a {
+	color:orange;
+ }

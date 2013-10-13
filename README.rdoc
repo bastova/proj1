@@ -3,8 +3,9 @@
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
 -------HW4--------
-created show, edit views in users. Implemented show, new, edit, destroy, and index methods for users. Links on the index page.
-table Likes now belongs_to users, users has_many likes. Likes has edit, index, show, new views and edit, show, destroy, new methods
+added 3 restrictions to "add new user" : name can't be blank, name must be unique, email has to have the correct format ***@***.***
+
+added stylesheet
 
 Heroku: http://safe-mountain-1693.herokuapp.com/
 
