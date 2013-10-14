@@ -30,6 +30,10 @@
 	color:orange;
  }
  
- .new_user {
+ .new_user{
+	margin-top: 20px;
+ }
+ 
+ .new_like{
 	margin-top: 20px;
  }
