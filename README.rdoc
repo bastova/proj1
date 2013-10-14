@@ -5,7 +5,7 @@ MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 -------HW4--------
 added 3 restrictions to "add new user" : name can't be blank, name must be unique, email has to have the correct format ***@***.***
 
-added stylesheet
+EXTRA: added stylesheet
 
 Heroku: http://safe-mountain-1693.herokuapp.com/
 
