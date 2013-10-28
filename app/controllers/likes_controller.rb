@@ -1,6 +1,11 @@
 class LikesController < ApplicationController
   def index
-	@likes = Like.all
+	#@likes = Like.all
+	if user_signed_in?
+		@likes = Like.where(user_id: current_user)
+		else
+		@likes = []
+	end
   end
 
   def new
@@ -9,11 +14,15 @@ class LikesController < ApplicationController
   
    def create
 	  @like = Like.new(params[:like])
-	  if @like.save
-		redirect_to likes_path
-	  else
-		render 'new'
-	  end
+	  if(@like.user_id != current_user.id)
+		redirect_to root_path
+	else
+		if @like.save
+			redirect_to likes_path
+		else
+			render 'new'
+		end
+	end
   end
 
 
