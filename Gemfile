@@ -9,6 +9,10 @@ gem 'devise', '3.1.1'
 # gem 'sqlite3'
 gem 'protected_attributes'
 
+group :development do
+	gem 'letter_opener', github: 'ryanb/letter_opener'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

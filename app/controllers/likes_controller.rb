@@ -18,6 +18,7 @@ class LikesController < ApplicationController
 		redirect_to root_path
 	else
 		if @like.save
+			Notifications.new_like(@like).deliver
 			redirect_to likes_path
 		else
 			render 'new'
