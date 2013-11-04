@@ -2,11 +2,9 @@
 
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
--------HW7--------
-I installed devise 3.1.1 gem. Now before doing anything, the user must sign up/sign in with email + password. To change the name of the user, go to view users, click edit, and add the name.
-I want email/pass to be the sign in credentials, while edit form is the additional info form (might add address, phone etc.) 
+-------HW8--------
 
-EXTRA: added stylesheet
+I installed SendGrid addon that sends notifications if the user adds a new like.
 
 Heroku: http://safe-mountain-1693.herokuapp.com/
 
