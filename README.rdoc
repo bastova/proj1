@@ -2,9 +2,11 @@
 
 MY HEROKU LINK: http://safe-mountain-1693.herokuapp.com/
 
--------HW8--------
+-------HW9--------
 
-I installed SendGrid addon that sends notifications if the user adds a new like.
+I added a scope to the users model. 
+Now in the users index only users with non-empty name are displayed. 
+When registered, new user doesn't have a name. To edit the profile I added Edit Profile drop-down menu -> add name there.
 
 Heroku: http://safe-mountain-1693.herokuapp.com/
 
