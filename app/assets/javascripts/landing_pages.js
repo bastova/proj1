@@ -18,5 +18,11 @@ $(
 			$(this).css("width", wdth);
 			$(this).css("box-shadow", shadow);
 		});   
-	});   
+	},
+	function(){
+	$('.title_1').hover(function(){
+		alert("hello");
+	});
+	}
+	);    
 });
