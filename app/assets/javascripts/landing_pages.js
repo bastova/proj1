@@ -18,5 +18,5 @@ $(
 			$(this).css("width", wdth);
 			$(this).css("box-shadow", shadow);
 		});   
-	});    
+	});   
 });
