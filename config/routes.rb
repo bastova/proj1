@@ -1,5 +1,7 @@
 Proj1::Application.routes.draw do
 
+  resources :images
+
   devise_for :users
   #get "users/new"
   #get "users/index"

@@ -1,0 +1,31 @@
+<h1>Listing images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+       <tr>
+		  <% for column in Image.content_columns %>
+			<!--<td><%=h image.send(column.name) %></td>-->
+		  <% end %>
+		  <td>
+				<img src="<%= image.photo.url(:small) %>" style="max-width:640px; border: 1px solid #000; border-radius: 5px;"/>
+			</td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>
