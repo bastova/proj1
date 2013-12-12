@@ -28,4 +28,13 @@ Proj1::Application.configure do
   config.assets.debug = true
   config.action_mailer.delivery_method = :letter_opener
   
+  config.paperclip_defaults = {
+	  :storage => :s3,
+	  :s3_credentials => {
+		:bucket => "antonbastov_gallery",
+		:access_key_id => "AKIAIWDFFVO566VYBD3Q",
+		:secret_access_key => "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"
+	  }
+	}
+  
 end
