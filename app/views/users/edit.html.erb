@@ -1,9 +1,22 @@
 <%= form_for(@user) do |f| %>
 <div class="field">
-    <p>name</p> 
+    <p class="edit_profile">name</p> 
 	<%= f.text_field :name%>
     </div>
+	<div class="field">
+	<p class="edit_profile">title</p> 
+	<%= f.text_field :title%>
+    </div>
+	<div class="field">
+	<p class="edit_profile">region</p> 
+	<%= select( :country, :country, options_for_select([ ["North America", 1], ["Australia", 2]])) %>
+    </div>
+	<div class="field">
+	<p class="edit_profile">city</p> 
+	<%= f.text_field :city%>
+    </div>
     <div class="field">
+	<h1>account login info</h1>
     <p>email</p> 
      <%= f.text_field :email%>
     </div>
