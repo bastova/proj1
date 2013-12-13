@@ -1,9 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<div style="text-align:center">
-<img src="<%= @image.photo.url(:original) %>" style="max-width:640px; border: 2px solid #000; border-radius: 5px;"/>
+<div style="height: auto;
+padding-top: 40px;
+text-align: center;
+min-height: 504px;
+background-size: 100% auto;
+background: url('http://www.hdwallpapersplus.com/wp-content/uploads/2013/07/10/vintage-hd-abstract.jpg'); 
+margin-top: -20px;
+box-shadow: 0px 5px 10px">
 
+<div style="text-align:center">
+	<div style="width: auto;
+height: auto;
+margin: 0px 100px 0 100px;
+background: #EEE;
+padding: 20px 30px 30px 30px;
+border-radius: 10px;
+text-align: center;
+min-width: 230px;
+display: inline-block;
+box-shadow: 0px 5px 10px #777777;">
+		<a href="<%= @image.photo.url(:original) %>"><img src="<%= @image.photo.url(:original) %>" style="max-width:640px; border: 2px solid #000; border-radius: 5px;"/></a><br>
+		<div style="width: 150px; background: #DDD; margin: 0 10px; padding: 5px 0 5px 0; display:inline-block">
+		<% if @image.user_id == current_user.id %>
+		<a style="text-decoration: none; background-color: transparent;" class="gallery_link" href="<%= edit_image_path(@image) %>">Edit</a> |
+		<a style="text-decoration: none; background-color: transparent;" class="gallery_link" <%= link_to 'Destroy', @image, method: :delete, data: { confirm: 'Are you sure?' } %></a> |
+		<% end %>
+		<a style="text-decoration: none; background-color: transparent;" class="gallery_link" href="<%=images_path %>">Back</a>
+		</div>
+		
+	</div>
 </div>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+</div>
