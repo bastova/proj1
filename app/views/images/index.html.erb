@@ -1,4 +1,19 @@
-<h1>Listing images</h1>
+
+<div style="height: auto;
+padding-top: 40px;
+text-align: center;
+min-height: 504px;
+background-size: 100% auto;
+background: url('http://www.hdwallpapersplus.com/wp-content/uploads/2013/07/10/vintage-hd-abstract.jpg'); 
+margin-top: -20px;
+box-shadow: 0px 5px 10px">
+<h1 style="color: white">Picture Gallery</h1>
+
+
+
+<a style="text-decoration: none; background-color: transparent; display:block;  padding-top: 25px" href="<%= new_image_path %>">
+<div class="upload_link">Upload<br>Image</div></a>
+
 
 <table>
   <thead>
@@ -10,7 +25,12 @@
   </thead>
 
   <tbody>
-    <% @images.each do |image| %>
+  </tbody>
+</table>
+
+<div style="" class="gallery">
+	<% @images.each do |image| %>
+		<div style="width: 170px; height:auto; text-align:center; display:inline-block; position:relative; background: ;text-align:center">
        <tr>
 		  <% for column in Image.content_columns %>
 			<!--<td><%=h image.send(column.name) %></td>-->
@@ -18,15 +38,21 @@
 		  <td>
 				<img src="<%= image.photo.url(:small) %>" style="max-width:640px; border: 1px solid #000; border-radius: 5px;"/>
 		  </td>
-		  <td><%= image.user_id %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+		</tr>
+		<div style="width: 150px; background: #DDD; margin: 0 10px; padding: 5px 0 5px 0;">
+		<br>
+		  <tr><a style="text-decoration: none; background-color: transparent;" class="gallery_link" href="images/<%= image.id %>">Full Size</a></tr>
+		  <% if image.user_id == current_user.id %>
+		  <br><br>
+		  <tr><a style="text-decoration: none; background-color: transparent;" class="gallery_link" href="<%= edit_image_path(image) %>">Edit</a></tr>
+		  <tr><a style="text-decoration: none; background-color: transparent;" class="gallery_link" <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></a></tr>
+		  <% end %>
+		  <br><br>
+		</div>
+		</div>
     <% end %>
-  </tbody>
-</table>
+	
 
+</div>
 <br>
-
-<%= link_to 'New Image', new_image_path %>
+</div>

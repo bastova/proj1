@@ -1,3 +1,37 @@
 // Place all the styles related to the images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gallery_link :hover :visited {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.gallery {
+width:auto; 
+height:auto; 
+margin:0px 100px 0 100px; 
+background: #EEE; 
+padding: 20px 30px 30px 30px; 
+border-radius: 10px; 
+text-align: center; 
+min-width: 230px; 
+box-shadow: 0px 5px 10px #777
+}
+
+.upload_link {
+width: 100px;
+height: 100px;
+background: #EEE;
+float: left;
+margin: -80px 0px 0px 150px;
+font-family: verdana;
+box-shadow: 0px 5px 10px #777;
+border: 5px solid #000;
+border-radius: 10px;
+padding-top:20px;
+}
+
+.upload_link:hover {
+background: #222;
+}
