@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131212215751) do
-=======
-ActiveRecord::Schema.define(version: 20131212195942) do
->>>>>>> e07dbecb412c40d68ef82de7b6079a54b798b483
 
   create_table "categories", force: true do |t|
     t.integer  "number"
