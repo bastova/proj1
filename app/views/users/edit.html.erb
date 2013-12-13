@@ -1,25 +1,35 @@
 <%= form_for(@user) do |f| %>
-<div class="field">
-    <p class="edit_profile">name</p> 
+<div style="width:500px; min-width:500px;background:#eee;
+			border:0px solid transparent;border-radius:10px;
+			margin-left:auto;margin-right:auto;
+			text-align:center;box-shadow:0px 5px 10px #777">
+	<div class="field" style="padding-top:20px">
+    <p class="edit_profile">NAME</p> 
 	<%= f.text_field :name%>
     </div>
 	<div class="field">
-	<p class="edit_profile">title</p> 
+	<p class="edit_profile">OCCUPATION</p> 
 	<%= f.text_field :title%>
     </div>
 	<div class="field">
-	<p class="edit_profile">region</p> 
-	<%= select( :country, :country, options_for_select([ ["North America", 1], ["Australia", 2]])) %>
+	<p class="edit_profile">AGE</p> 
+	<%= f.text_field :age%>
     </div>
 	<div class="field">
-	<p class="edit_profile">city</p> 
+	<p class="edit_profile">COUNTRY</p> 
+	<!--<%= select( :country, :country, options_for_select([ ["North America", 1], ["Australia", 2]])) %>-->
+	<%= f.text_field :country%>
+    </div>
+	<div class="field">
+	<p class="edit_profile">CITY</p> 
 	<%= f.text_field :city%>
     </div>
     <div class="field">
-	<h1>account login info</h1>
-    <div class="actions">
+	<h1>update account info</h1>
+    <div class="actions" style="padding-bottom:20px">
       <%= f.submit %>
     </div>
+</div>
 <% end %>
 <div class="error-msg">
 	<% if @user.errors.any? %>

@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
 	emailFormatValidation = /[a-z.-]+@[a-z \d -.]+[.][a-z]+/i
 	validates :email, format: {with: emailFormatValidation}
 	scope :has_name, -> {where("name <> ''").order(:name)}
+	#validates :age, numericality: { :only_integer => true, :greater_than_or_equal_to => 5 } 
+	#validates :age, :name, :country, :city, :email, :title, presence: true
 end

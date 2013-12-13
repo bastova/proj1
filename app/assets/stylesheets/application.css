@@ -13,9 +13,9 @@
  *= require bootstrap
  */
  .field {
-	background: #333;
-	color: #fff;
-	//margin-top:-16px;
+	//background: #333;
+	//color: #fff;
+	
  }
 
  input {

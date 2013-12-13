@@ -1,23 +1,41 @@
-<div style="width:450px;height:270px;margin-left:auto;margin-right:auto;margin-top:50px">
-<div style="width:200px;height:50px; background: #333;text-align:center">
+<script type="text/javascript">$(	
+	function() {
+	$('.title_1').bind("mouseover", function(){
+		var color  = $(this).css("background-color");
+		var wdth  = $(this).css("width");
+		var shadow  = $(this).css("box-shadow");
+		//var margin = $(this).css("margin-left");
+
+		$(this).css("background", "#555");
+		$(this).css("width", "500px");
+		$(this).css("box-shadow", "0px 3px 5px rgba(0,0,0,0.5) inset");
+		//$(this).css("margin-left", "150px");
+
+		$(this).bind("mouseout", function(){
+			$(this).css("background", color);
+			$(this).css("width", wdth);
+			$(this).css("box-shadow", shadow);
+			//$(this).css("margin-left"), margin);
+		});   
+	});    
+});
+</script>
+<div style="width:500px;margin-left:auto;margin-right:auto;margin-top:0px;
+			background:#eee;border:1px solid transparent;border-radius:10px;
+			box-shadow:0px 5px 10px #777">
+<!--<div style="width:200px;height:50px; background: #333;text-align:center">
 <h1 style="font-family:verdana;font-size:14px;color:white;padding-top:15px;"><a href="/">Denys Bastov</a></h1>
 </div>
 <div style="width:350px; height:50px; position:absolute; margin-left:200px;background:#666;margin-top:-50px;box-shadow: 3px 0px 10px rgba(0,0,0,0.5) inset"> 
 <a href="https://github.com/bastovd/proj1" style="line-height:45px;margin-left:20px;font-family:verdana;font-size:12px;color:white">https://github.com/bastovd/proj1</a>
 </div>
-<img src="http://poroawards.net/wp-content/themes/PATheme/images/site/porologo.png" style="width:200px; box-shadow: 0px 5px 10px rgba(0,0,0,0.5)">
-<div style="width:350px;height:215px; background: #fff;text-align:center;position:relative;margin-left:200px;margin-top:-240px;box-shadow: 5px 0px 10px rgba(0,0,0,0.5) inset">
-<div class="title_1" style="width:350px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
-	<a href="<%= users_path %>"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">View users</span></p></a>
+<img src="http://poroawards.net/wp-content/themes/PATheme/images/site/porologo.png" style="width:200px; box-shadow: 0px 5px 10px rgba(0,0,0,0.5)">-->
+<div style="width:500px;height:240px; text-align:center;position:relative;margin-top:0px;border:1px solid transparent;border-radius:10px">
+<div class="title_1" style="width:500px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
+	<a href="<%= users_path %>"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">View Users</span></p></a>
 </div>
-<div class="title_1" style="width:350px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
-	<a href="<%= users_path %>/new"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">Add new user</span></p></a>
-</div>
-<div class="title_1" style="width:350px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
-	<a href="<%= likes_path %>"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">View likes</span></p></a>
-</div>
-<div class="title_1" style="width:350px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
-	<a href="<%= likes_path %>/new"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">Add new like</span></p></a>
+<div class="title_1" style="width:500px;height:30px;background:#222;font-family:verdana; font-size:14px;text-decoration:none;">
+	<a href="<%= images_path %>"><p style="color:white;margin-top:20px;padding-top:5px"><span style="height:30px">View Images</span></p></a>
 </div>
 </div>
 </div>

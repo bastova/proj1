@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(	
+/*$(	
 	function() {
 	$('.title_1').bind("mouseover", function(){
 		var color  = $(this).css("background-color");
@@ -19,4 +19,4 @@ $(
 			$(this).css("box-shadow", shadow);
 		});   
 	});    
-});
+});*/
