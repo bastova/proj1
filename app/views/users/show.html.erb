@@ -1,26 +1,13 @@
 <div>
-	<div style="text-align:center; min-width:400px;width:400px;
-				margin-left:auto;margin-right:auto;margin-top:0px; 
-				background:#eee; border: 1px solid transparent;border-radius:10px;
-				box-shadow:0px 5px 10px #777">
-	<h2 style="font-family:Verdana"><%= @user.name %></h2>
-	<div style="text-align:right;width:180px;height:150px;padding-right:10px;padding-top:20px">
-	<p>Title :</p>
-	<p>Age :</p>
-	<p>E-mail :</p>
-	<p>Country :</p>
-	<p>City :</p>
-	</div>
-	<div style="text-align:left;width:200px;height:150px;margin-left:180px;margin-top:-150px;padding-left:10px;padding-top:20px">
+	<h2><%= @user.name %></h2>
 	<p><%= @user.title %></p>
 	<p><%= @user.age %></p>
 	<p><%= @user.email %></p>
 	<p><%= @user.country %></p>
-	<p style="padding-bottom:0px"><%= @user.city %></p>
-	</div>
-	</div>
-	<!--<p><%= @current_user.id %></p>-->
+	<p><%= @user.city %></p>
+	<p><%= @current_user.id %></p>
 	<% @images.each do |image| %>
+		USER ID FOR IMAGE <%= image.user_id %>
 		<img src="<%= image.photo.url(:original) %>" style="max-width:640px; border: 2px solid #000; border-radius: 5px;"/>
 	<% end %>
 </div>
