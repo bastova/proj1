@@ -1,5 +1,7 @@
 class Image < ActiveRecord::Base
-	attr_accessible :photo
+	attr_accessible :photo, :user_id
+	
+	belongs_to :user
 	
 	has_attached_file :photo, :styles => { :small => "150x150>",
 										   :medium => "300x300#",

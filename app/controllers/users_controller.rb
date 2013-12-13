@@ -21,7 +21,15 @@ class UsersController < ApplicationController
   end
   
   def show
+	#if user_signed_in?
+	#	@user = User.where(user_id: current_user)
+	#end
 	@user = User.find(params[:id])
+	if user_signed_in?
+		@images = Image.where(user_id: @user.id)
+		else
+		@images = []
+	end
   end
   
   def edit

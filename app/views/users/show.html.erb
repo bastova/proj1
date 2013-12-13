@@ -5,6 +5,11 @@
 	<p><%= @user.email %></p>
 	<p><%= @user.country %></p>
 	<p><%= @user.city %></p>
+	<p><%= @current_user.id %></p>
+	<% @images.each do |image| %>
+		USER ID FOR IMAGE <%= image.user_id %>
+		<img src="<%= image.photo.url(:original) %>" style="max-width:640px; border: 2px solid #000; border-radius: 5px;"/>
+	<% end %>
 </div>
 
 

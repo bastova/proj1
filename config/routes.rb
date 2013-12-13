@@ -1,10 +1,19 @@
 Proj1::Application.routes.draw do
 
+  get "profiles/new"
+  get "profiles/edit"
+  get "profiles/index"
+  get "profiles/show"
+  get "profile/new"
+  get "profile/edit"
+  get "profile/index"
+  get "profile/show"
   resources :images
 
   devise_for :users
   #get "users/new"
   #get "users/index"
+  resources :profile
   resources :users
   resources :likes
   resources :categorys

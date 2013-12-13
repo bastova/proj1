@@ -20,7 +20,16 @@
 		<td>email</td>
 		<td>password</td>
 	</tr>
+	<% 
+	@user = User.where(id: current_user)
+			if @user.name == ""
+				%> I HAVE A NAME! <%
+			else
+				%> YOU HAVE NO NAME! EDIT YOUR PROFILE, JERK!<%
+			end
+	%>
 	<% @users.each do |user| %>
+	
 	<tr style="text-align:left">
 		<td><%= user.name %></td>
 		<td><%= user.email %></td>
